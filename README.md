@@ -26,19 +26,22 @@ Built a **Record-Triggered Flow** on the Case object that:
    record
 
 ## Flow Architecture
+
+```
 Record-Triggered Flow (Case: Priority = High, Status ≠ Closed)
-│
-▼
+        │
+        ▼
 Scheduled Path — 24 Hours After Case Creation
-│
-▼
+        │
+        ▼
 Get Records — Fetch Escalation Queue (Group)
-│
-▼
+        │
+        ▼
 Update Records — Assign Case to Queue + Set Status = Escalated
-│
-▼
+        │
+        ▼
 Action — Post to Chatter (Notify Team)
+```
 
 
 ## Key Salesforce Concepts Used
